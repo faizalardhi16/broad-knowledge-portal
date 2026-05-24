@@ -9,6 +9,9 @@ from datetime import datetime, timezone, timedelta
 from contextlib import asynccontextmanager
 from typing import Optional
 
+from dotenv import load_dotenv
+load_dotenv()
+
 from fastapi import FastAPI, HTTPException, Depends, Query, Header, Request
 from fastapi.responses import Response
 from fastapi.middleware.cors import CORSMiddleware
@@ -49,8 +52,8 @@ JWT_EXPIRATION_HOURS = int(os.getenv("JWT_EXPIRATION_HOURS", "72"))
 # ── SMTP (Sumopod) ──────────────────────────────────────────────────────
 SMTP_HOST = os.getenv("SMTP_HOST", "smtp.sumopod.com")
 SMTP_PORT = int(os.getenv("SMTP_PORT", "465"))
-SMTP_USER = os.getenv("SMTP_USER", "cmpj7ynbc1w1rmk08nuh0t023")
-SMTP_PASS = os.getenv("SMTP_PASS", "9cNJlbF1hHh9DPJgzCmWxey8JU214zVl")
+SMTP_USER = os.getenv("SMTP_USER")
+SMTP_PASS = os.getenv("SMTP_PASS")
 SMTP_FROM = os.getenv("SMTP_FROM", "Portal Notiovation <noreply@portal.notiovation.com>")
 
 GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID", "")
