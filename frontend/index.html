@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Broad Knowledge Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <h1 class="logo">🌐 Broad Knowledge</h1>
+    <p class="tagline">Wawasan luas, otomatis tiap 3 jam</p>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌓</button>
+  </div>
+</header>
+
+<nav class="filter-bar" id="filter-bar">
+  <button class="filter-btn active" onclick="filterCategory('')">Semua</button>
+</nav>
+
+<main class="articles-grid" id="articles-grid">
+  <div class="loading">🔄 Memuat artikel...</div>
+</main>
+
+<footer class="footer">
+  <p>📚 <strong>Broad Knowledge Portal</strong> — Powered by Hermes AI · Update tiap 3 jam</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+services:
+  news-portal:
+    build: .
+    container_name: broad-knowledge-portal
+    ports:
+      - "8080:80"
+    volumes:
+      - news_data:/data
+    environment:
+      - API_KEY=${API_KEY:-hermes-news-portal-secret-key-2024}
+      - DB_PATH=/data/news.db
+    restart: unless-stopped
+
+volumes:
+  news_data:
