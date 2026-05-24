@@ -3,7 +3,7 @@ services:
     build: .
     container_name: broad-knowledge-portal
     ports:
-      - "8080:80"
+      - "8088:80"
     volumes:
       - news_data:/data
     environment:
