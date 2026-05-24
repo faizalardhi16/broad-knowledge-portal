@@ -1,32 +1,87 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Broad Knowledge Portal</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="header">
-  <div class="header-inner">
-    <h1 class="logo">🌐 Broad Knowledge</h1>
-    <p class="tagline">Wawasan luas, otomatis tiap 3 jam</p>
-    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌓</button>
-  </div>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d1d1f" />
+    <meta name="color-scheme" content="light dark" />
 
-<nav class="filter-bar" id="filter-bar">
-  <button class="filter-btn active" onclick="filterCategory('')">Semua</button>
-</nav>
+    <!-- Primary Meta -->
+    <title>Portal Notiovation — Wawasan Luas Setiap Hari</title>
+    <meta name="title" content="Portal Notiovation — Wawasan Luas Setiap Hari" />
+    <meta name="description" content="Portal berita dan wawasan otomatis yang diperbarui setiap 3 jam. Teknologi, Sains, Ekonomi, Bisnis, Gaming, dan insight terbaru dari seluruh dunia — dalam Bahasa Indonesia." />
+    <meta name="keywords" content="berita terbaru, teknologi, AI, sains, ekonomi, bisnis, gaming, wawasan, portal berita indonesia, broad knowledge" />
+    <meta name="author" content="Portal Notiovation" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://portal.notiovation.com/" />
 
-<main class="articles-grid" id="articles-grid">
-  <div class="loading">🔄 Memuat artikel...</div>
-</main>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portal.notiovation.com/" />
+    <meta property="og:title" content="Portal Notiovation — Wawasan Luas Setiap Hari" />
+    <meta property="og:description" content="Portal berita dan wawasan otomatis yang diperbarui setiap 3 jam. Teknologi, Sains, Ekonomi, Bisnis, Gaming, dan insight terbaru." />
+    <meta property="og:site_name" content="Portal Notiovation" />
+    <meta property="og:locale" content="id_ID" />
 
-<footer class="footer">
-  <p>📚 <strong>Broad Knowledge Portal</strong> — Powered by Hermes AI · Update tiap 3 jam</p>
-</footer>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portal Notiovation — Wawasan Luas Setiap Hari" />
+    <meta name="twitter:description" content="Portal berita dan wawasan otomatis — update tiap 3 jam. Teknologi, Sains, Ekonomi, Bisnis, Gaming." />
 
-<script src="script.js"></script>
-</body>
+    <!-- Geo -->
+    <meta name="geo.region" content="ID" />
+    <meta name="geo.placename" content="Indonesia" />
+    <meta name="language" content="Indonesian" />
+
+    <!-- Fonts — preconnect + preload for LCP optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
+
+    <!-- JSON-LD Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Portal Notiovation",
+      "url": "https://portal.notiovation.com",
+      "description": "Portal berita dan wawasan otomatis yang diperbarui setiap 3 jam.",
+      "inLanguage": "id",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://portal.notiovation.com/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Portal Notiovation",
+      "url": "https://portal.notiovation.com",
+      "description": "Portal berita otomatis — wawasan terbaru tiap 3 jam",
+      "sameAs": []
+    }
+    </script>
+
+    <!-- Google Analytics GA4 — ganti G-XXXXXXXXXX dengan Measurement ID kamu -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

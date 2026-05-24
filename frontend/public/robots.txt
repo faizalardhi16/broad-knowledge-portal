@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /login
+Disallow: /register
+
+Sitemap: https://portal.notiovation.com/sitemap.xml
+
+Host: portal.notiovation.com

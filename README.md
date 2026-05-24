@@ -1,6 +1,6 @@
-# 🌐 Broad Knowledge Portal
+# 🌐 Portal Notiovation
 
-Portal berita otomatis — artikel research dari Hermes AI tentang teknologi, sains, ekonomi, gaming, dan pengetahuan umum.
+Portal berita otomatis — artikel research dari Notiovation tentang teknologi, sains, ekonomi, gaming, dan pengetahuan umum.
 
 ## Tech Stack
 

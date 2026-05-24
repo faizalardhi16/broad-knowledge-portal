@@ -8,8 +8,18 @@ services:
       - news_data:/data
     environment:
       - API_KEY=${API_KEY:-hermes-news-portal-secret-key-2024}
-      - DB_PATH=/data/news.db
+      - MYSQL_HOST=mysql-portal
+      - MYSQL_PORT=3306
+      - MYSQL_USER=portal
+      - MYSQL_PASSWORD=portal-pass-2026
+      - MYSQL_DB=portal
+    networks:
+      - portal-net
     restart: unless-stopped
+
+networks:
+  portal-net:
+    external: true
 
 volumes:
   news_data:
